@@ -13,6 +13,9 @@ var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+app.set('x-powered-by',false);
+app.enable('case sensitive routing');
+app.set('strict routing',true);
 
 app.use(logger('dev'));
 app.use(express.json());

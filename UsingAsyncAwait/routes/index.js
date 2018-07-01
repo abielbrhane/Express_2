@@ -13,7 +13,7 @@ async function getJSON(res){
     res.end(JSON.stringify(result.data));
   }
   catch (err) {
-    res.render('error',{error:err});
+    res.render('error',{'error':err,'message':err.message});
   }
 }
 

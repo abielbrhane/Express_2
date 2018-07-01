@@ -9,7 +9,7 @@ router.get('/', function(req, res, next) {
       res.end(JSON.stringify(response.data));
     })
     .catch(function(error){
-      res.render('error',{error:'error'});
+      res.render('error',{'error':error,'message':error.message});
     });
   
 });
